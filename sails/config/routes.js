@@ -20,9 +20,10 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-  'get /api/order': 'OrderController.getOrder',
-  'post /api/order': 'OrderController.postOrder',
-  'put /api/order': 'OrderController.updateOrder',
+  'get /api/order': 'OrderController.getProtectedOrder',
+  'post /api/order': 'OrderController.postProtectedOrder',
+  'put /api/order/:id': 'OrderController.updateProtectedOrder',
+  'post /api/register': 'UserController.register',
   
   
 
